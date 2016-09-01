@@ -6,17 +6,24 @@
   </head>
   <body>
     <h1>Get yo drank delivered!</h1>
-    <input type="text" value="" id="full-address">
-    <input type="text" value="" id="zip-code">
-    <input type="text" value="" id="alcohol">
+    Street Address: <input type="text" value="" id="full-address">
+    Zip Code: <input type="text" value="" id="zip-code">
+    Alcohol Type: <select name="alcohol" value="" id="alcohol">
+      <option value="beer">Beer</option>
+      <option value="wine">Wine</option>
+      <option value="liquor">Liquor</option>
+      </select>
     <!--  <input type="text" value="" id="alcohol-type">-->
     <button type="button" name="button" id="get-dranks">Get Dranks!</button>
 
     <div class="result">
-      <h4 id="merchant-name"></h4>
+      <h4 id='merchant-label'></h4>
+      <p id="merchant-name"> </p>
       <img src="" id="merchant-logo"/>
-      <h4 id="merchant-phone"></h4>
-      <h4 id="merchant-rating"></h4>
+      <h4 id='phone-label'></h4>
+      <p id="merchant-phone"></p>
+      <h4 id='rating-label'></h4>
+      <p id="merchant-rating"></p>
     </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
