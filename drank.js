@@ -30,13 +30,24 @@ $('button#get-dranks').click(function(){
           <p>${phone} </p>
           <h4>Rating:</h4>
           <p>${rating} </p>
-          <h4>Yelp Excerpts: </h4>
+          <h4 id='excerpt'>Yelp Excerpts: </h4>
+          <button id='show'>show</button>
+          <button id='hide'>hide</button>
           </div><br>
           `);
           for (var j = 0; j < response.data.merchants[i].yelp_info.rating.reviews.length; j++) {
-            debugger;
+
+
             var excerpt = response.data.merchants[i].yelp_info.rating.reviews[j].excerpt
             $(`div#result${i}`).append(`<div id=review${i}><li>${excerpt}</li></div>`);
+
+            $(`button#hide`).click(function(){
+              $('li').hide();
+            });
+            $(`button#show`).click(function(){
+              $('li').show();
+            });
+
           }
 
 
